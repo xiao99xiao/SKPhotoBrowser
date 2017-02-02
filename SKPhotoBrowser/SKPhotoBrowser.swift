@@ -498,9 +498,9 @@ internal extension SKPhotoBrowser {
     }
     
     func deleteButtonPressed(_ sender: UIButton) {
-        delegate?.removePhoto?(self, index: currentPageIndex) { [weak self] in
-            self?.deleteImage()
-        }
+        delegate?.performActionOnPhoto?(self.photoAtIndex(self.currentPageIndex), index: currentPageIndex, reload: { _ in
+            return
+        })
     }
     
     func closeButtonPressed(_ sender: UIButton) {

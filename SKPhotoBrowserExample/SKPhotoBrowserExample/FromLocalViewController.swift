@@ -20,7 +20,7 @@ class FromLocalViewController: UIViewController, UICollectionViewDataSource, UIC
         // Static setup
         SKPhotoBrowserOptions.displayAction = false
         SKPhotoBrowserOptions.displayStatusbar = true
-
+        SKPhotoBrowserOptions.displayDeleteButton = true
         setupTestData()
         setupCollectionView()
     }

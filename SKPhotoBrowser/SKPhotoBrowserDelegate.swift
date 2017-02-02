@@ -63,6 +63,15 @@ import Foundation
     @objc optional func removePhoto(_ browser: SKPhotoBrowser, index: Int, reload: @escaping (() -> Void))
     
     /**
+     Tells the delegate to perform any action on a photo, when implementing this call, be sure to call reload to finish the deletion process
+     
+     - Parameter photo: reference to the current SKPhoto
+     - Parameter index: the index of the removed photo
+     - Parameter reload: function that needs to be called after finishing syncing up
+     */
+    @objc optional func performActionOnPhoto(_ photo: SKPhotoProtocol, index: Int, reload: @escaping (() -> Void))
+    
+    /**
      Asks the delegate for the view for a certain photo. Needed to detemine the animation when presenting/closing the browser.
      
      - Parameter browser: reference to the calling SKPhotoBrowser
