@@ -69,7 +69,7 @@ import Foundation
      - Parameter index: the index of the removed photo
      - Parameter reload: function that needs to be called after finishing syncing up
      */
-    @objc optional func performActionOnPhoto(_ photo: SKPhotoProtocol, index: Int, reload: @escaping (() -> Void))
+    @objc optional func performActionOnPhoto(_ photo: SKPhotoProtocol, index: Int, viewController: UIViewController, reload: @escaping (() -> Void))
     
     /**
      Asks the delegate for the view for a certain photo. Needed to detemine the animation when presenting/closing the browser.
